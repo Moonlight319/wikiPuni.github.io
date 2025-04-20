@@ -1,0 +1,156 @@
+body{
+	background-image: url(../img/hee.jpg);
+
+}
+
+header{
+	width: 100%;
+	text-align: center;
+    display: inline-block;
+    position: relative;
+	transition: 0.2s ease-in;
+}
+
+.op{
+	position: absolute;
+      bottom: 200px;
+      left: 0;
+      right: 0;
+      font-size: 30px;
+      font-family: verdana;
+      background: rgba(0,0,0,0.5);
+      color: white;
+      padding: 10px;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+}
+
+header:hover {
+	transform: scale(1.01) ;
+	filter: brightness(0.5) ;
+	
+
+}
+
+header:hover .op{
+
+	opacity: 1;
+
+}
+
+main {
+	width: 80%; 
+	margin: 0 auto;
+	border: solid;
+	border-color: #54e8ff ;
+ }
+
+
+section.info{
+
+	background-color: #0d1277 ;
+	color: white ;
+	font-family: verdana;
+}
+
+h1{
+	font-family: Bebas Neue;
+	text-decoration: underline;
+	font-size: 60px;
+}
+
+button{
+	width: 80%;
+	background: linear-gradient(blue, hotpink);
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	font-family: verdana;
+	font-size: 23px;
+	border: solid;
+	border-color: blue;
+	transition: transform 0.3s ease-in;
+}
+
+button:hover{
+	transform: scale(1.05);
+	background: linear-gradient(cyan, blue);
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+
+}
+
+h1{
+	text-align: center;
+	
+}
+
+
+.fond{
+width: 80%;
+height: auto;
+object-fit: cover;
+}
+
+
+.puni{
+position: absolute;
+top: 200x;
+left: 200px;
+width: 280px;
+height: auto;
+rotate: -20deg;
+}
+
+#alert-dialog {
+  opacity: 0;
+  transition:
+    display 1s allow-discrete,
+    overlay 1s allow-discrete,
+    translate 1s,
+    opacity 1s;
+  translate: 0 50%;
+  will-change: translate, opacity;
+}
+
+#alert-dialog[open] {
+  opacity: 1;
+  translate: 0;
+  @starting-style {
+    opacity: 0;
+    translate: 0 50%;
+  }
+}
+
+#alert-dialog::backdrop {
+  background: linear-gradient(#000d, #000a);
+  opacity: 1;
+  transition:
+    display 1s allow-discrete,
+    opacity 1s;
+
+  @starting-style { opacity: 0 }
+}
+
+#alert-dialog:not([open])::backdrop {
+  opacity: 0;
+}
+
+
+dialog{
+  background: transparent;
+  border-color: cyan;
+
+  color: blue;
+  font-size: 26px;
+  font-family: red rose;
+  width: 50%;
+  height: 500px;
+}
+
+
+      
+
+
+
+
