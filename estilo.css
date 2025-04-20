@@ -95,9 +95,9 @@ object-fit: cover;
 
 .puni{
 position: absolute;
-top: 200x;
+bottom: -4px;
 left: 200px;
-width: 280px;
+width: 30%;
 height: auto;
 rotate: -20deg;
 }
