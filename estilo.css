@@ -1,9 +1,11 @@
 body{
-	background-image: url(hee.jpg);
+	background-image: url(../img/hee.jpg);
 
 }
 
-header{
+
+
+header.ol{
 	width: 100%;
 	text-align: center;
     display: inline-block;
@@ -26,16 +28,28 @@ header{
       transition: opacity 0.3s ease;
 }
 
-header:hover {
+header.ol:hover {
 	transform: scale(1.01) ;
 	filter: brightness(0.5) ;
 	
 
 }
 
-header:hover .op{
+header.ol:hover .op{
 
 	opacity: 1;
+
+}
+
+header.origi{
+	position: relative;
+	left: 140px ;
+}
+
+p.ORI{
+	color: white;
+	text-align: center;
+	font-family: verdana;
 
 }
 
@@ -52,6 +66,7 @@ section.info{
 	background-color: #0d1277 ;
 	color: white ;
 	font-family: verdana;
+
 }
 
 h1{
@@ -83,6 +98,11 @@ button:hover{
 h1{
 	text-align: center;
 	
+}
+
+.pu{
+	color: white;
+	font-family: verdana;
 }
 
 
@@ -147,6 +167,17 @@ dialog{
   width: 50%;
   height: 500px;
 }
+
+
+img.set{
+	transition: transform 0.3s ease-in;
+}
+
+img.set:hover{
+	transform: scale(1.05);
+}
+
+
 
 
       
