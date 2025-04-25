@@ -1,284 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Puni Puni Prototype</title>
+  <meta charset="UTF-8">
+  <title>Imagen con giro 3D</title>
   <style>
-    body {
-      margin: 0;
-      background: linear-gradient(#111, #222);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      overflow: hidden;
-      font-family: sans-serif;
-      flex-direction: column;
-      color: white;
+    .contenedor {
+      perspective: 1000px;
+      display: inline-block;
     }
 
-    #hud {
-      margin-bottom: 10px;
-      font-size: 18px;
+    .imagen {
+      width: 200px;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
     }
 
-    #game {
-      position: relative;
-      width: 320px;
-      height: 480px;
-      background: #222;
-      border: 5px solid #fff;
-      border-radius: 16px;
-      overflow: hidden;
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      grid-template-rows: repeat(8, 1fr);
-      gap: 2px;
-      box-shadow: 0 0 20px #000;
-    }
-
-    .puni {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      background-size: cover;
-      background-position: center;
-      transition: transform 0.2s ease, filter 0.2s;
-      user-select: none;
-      animation: dropIn 0.4s ease, jelly 1s ease infinite, glowPulse 2s ease-in-out infinite;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .puni-detail {
-      position: absolute;
-      width: 70%;
-      height: 70%;
-      top: 0;
-      left: 0;
-      pointer-events: none;
-      animation: floaty 2s ease-in-out infinite;
-      background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
-      border-radius: 50%;
-      box-shadow: 0 0 8px rgba(255,255,255,0.2);
-    }
-
-    .puni:hover {
-      transform: scale(1.1);
-      filter: brightness(1.2);
-    }
-
-    .selected {
-      outline: 3px solid yellow;
-    }
-
-    @keyframes dropIn {
-      0% {
-        transform: translateY(-100%) scale(0.6);
-        opacity: 0;
-      }
-      50% {
-        transform: translateY(10%) scale(1.2);
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(0) scale(1);
-      }
-    }
-
-    @keyframes jelly {
-      0%, 100% {
-        transform: scale(1, 1);
-      }
-      25% {
-        transform: scale(1.1, 0.9);
-      }
-      50% {
-        transform: scale(0.9, 1.1);
-      }
-      75% {
-        transform: scale(1.05, 0.95);
-      }
-    }
-
-    @keyframes glowPulse {
-      0%, 100% {
-        box-shadow: 0 0 10px rgba(255,255,255,0.2);
-      }
-      50% {
-        box-shadow: 0 0 20px rgba(255,255,255,0.5);
-      }
-    }
-
-    @keyframes floaty {
-      0%, 100% {
-        transform: translateY(0);
-        opacity: 0.6;
-      }
-      50% {
-        transform: translateY(-5px);
-        opacity: 1;
-      }
-    }
-
-    @keyframes explode {
-      0% {
-        transform: scale(1);
-        opacity: 1;
-      }
-      100% {
-        transform: scale(1.5);
-        opacity: 0;
-      }
+    .girar {
+      transform: rotateY(180deg);
     }
   </style>
 </head>
 <body>
-  <div id="hud">
-    Tiempo: <span id="timer">60</span>s | Puntos: <span id="score">0</span> | Combo: <span id="combo">0</span>
-    <button id="restartBtn">Reiniciar</button>
-  </div>
-  <div id="game"></div>
-  <audio id="popSound" src="https://www.myinstants.com/media/sounds/pop-cat-original-meme.mp3"></audio>
-  <audio id="comboSound" src="https://www.myinstants.com/media/sounds/level-up.mp3"></audio>
 
-  <script>
-    const puniImages = [
-      'img/fushig.gif' // solo tu puni personalizado
-    ];
+<div class="contenedor">
+  <img id="miImagen" src="img/fu.png" class="imagen" onclick="cambiarImagen()">
+</div>
 
-    const grid = document.getElementById('game');
-    const timerEl = document.getElementById('timer');
-    const scoreEl = document.getElementById('score');
-    const comboEl = document.getElementById('combo');
-    const restartBtn = document.getElementById('restartBtn');
-    const popSound = document.getElementById('popSound');
-    const comboSound = document.getElementById('comboSound');
+<script>
+  let imagenOriginal = "img/fu.png";
+  let imagenNueva = "img/hitomi.png";
+  let usandoOriginal = true;
 
-    let isDragging = false;
-    let selectedPunis = [];
-    let currentColor = null;
-    let score = 0;
-    let combo = 0;
-    let gameActive = true;
-    let timerInterval;
+  function cambiarImagen() {
+    const img = document.getElementById("miImagen");
+    img.classList.add("girar");
 
-    function createPuni() {
-      const puni = document.createElement('div');
-      puni.classList.add('puni');
-      const img = puniImages[0];
-      puni.style.backgroundImage = `url(${img})`;
-      puni.dataset.color = img;
+    // Espera a que termine la animación (0.6s) para cambiar la imagen
+    setTimeout(() => {
+      img.src = usandoOriginal ? imagenNueva : imagenOriginal;
+      usandoOriginal = !usandoOriginal;
+      img.classList.remove("girar"); // quitar clase para permitir otro giro después
+    }, 300); // mitad del tiempo para dar el efecto de "volteo"
+  }
+</script>
 
-      // Agregar detalle visual
-      const detail = document.createElement('div');
-      detail.classList.add('puni-detail');
-      puni.appendChild(detail);
-
-      return puni;
-    }
-
-    function fillGrid() {
-      grid.innerHTML = '';
-      for (let i = 0; i < 48; i++) {
-        const puni = createPuni();
-        grid.appendChild(puni);
-      }
-    }
-
-    function clearSelection() {
-      selectedPunis.forEach(p => p.classList.remove('selected'));
-      selectedPunis = [];
-      currentColor = null;
-    }
-
-    function explodeSelected() {
-      popSound.currentTime = 0;
-      popSound.play();
-
-      if (selectedPunis.length > 3) {
-        combo++;
-        comboSound.currentTime = 0;
-        comboSound.play();
-      } else {
-        combo = 0;
-      }
-
-      comboEl.textContent = combo;
-
-      selectedPunis.forEach(p => {
-        p.style.animation = 'explode 0.3s forwards';
-        setTimeout(() => {
-          const newPuni = createPuni();
-          grid.replaceChild(newPuni, p);
-        }, 300);
-      });
-
-      score += selectedPunis.length * selectedPunis.length * (1 + combo * 0.2);
-      scoreEl.textContent = Math.floor(score);
-      clearSelection();
-    }
-
-    grid.addEventListener('mousedown', e => {
-      if (!gameActive) return;
-      if (e.target.classList.contains('puni')) {
-        isDragging = true;
-        currentColor = e.target.dataset.color;
-        e.target.classList.add('selected');
-        selectedPunis.push(e.target);
-      }
-    });
-
-    grid.addEventListener('mousemove', e => {
-      if (!gameActive) return;
-      if (isDragging && e.target.classList.contains('puni')) {
-        if (!selectedPunis.includes(e.target) && e.target.dataset.color === currentColor) {
-          e.target.classList.add('selected');
-          selectedPunis.push(e.target);
-        }
-      }
-    });
-
-    window.addEventListener('mouseup', () => {
-      if (!gameActive) return;
-      if (isDragging && selectedPunis.length > 1) {
-        explodeSelected();
-      } else {
-        clearSelection();
-      }
-      isDragging = false;
-    });
-
-    function startTimer() {
-      let time = 60;
-      timerEl.textContent = time;
-      timerInterval = setInterval(() => {
-        time--;
-        timerEl.textContent = time;
-        if (time <= 0) {
-          clearInterval(timerInterval);
-          gameActive = false;
-          alert('¡Tiempo terminado! Puntos: ' + Math.floor(score));
-        }
-      }, 1000);
-    }
-
-    restartBtn.addEventListener('click', () => {
-      clearInterval(timerInterval);
-      score = 0;
-      combo = 0;
-      scoreEl.textContent = score;
-      comboEl.textContent = combo;
-      gameActive = true;
-      fillGrid();
-      startTimer();
-    });
-
-    fillGrid();
-    startTimer();
-  </script>
 </body>
 </html>
