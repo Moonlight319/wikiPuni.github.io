@@ -1,5 +1,5 @@
 body{
-	background-image: url(hee.jpg);
+	background-image: url(../img/hee.jpg);
 
 }
 
@@ -50,6 +50,8 @@ p.ORI{
 	color: white;
 	text-align: center;
 	font-family: verdana;
+
+	font-size: 14px;
 
 }
 
@@ -102,6 +104,7 @@ h1{
 
 .pu{
 	color: white;
+	font-size: 10px;
 	font-family: verdana;
 }
 
@@ -175,6 +178,20 @@ img.set{
 
 img.set:hover{
 	transform: scale(1.05);
+}
+
+main.seriel{
+
+	width: 95%;
+	position: relative;
+	
+	
+}
+
+footer{
+	font-family: Bebas Neue;
+	color: white;
+
 }
 
 
