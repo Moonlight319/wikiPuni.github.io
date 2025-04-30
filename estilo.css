@@ -1,5 +1,5 @@
 body{
-	background-image: url(hee.jpg);
+	background-image: url(../img/hee.jpg);
 
 }
 
@@ -12,6 +12,34 @@ header.ol{
     position: relative;
 	transition: 0.2s ease-in;
 }
+
+nav {
+	    width: 80%; 
+	    margin: 0 auto;
+      background-color: #4A90E2;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 12px 0;
+      position: relative;
+      top: 10px;
+      z-index: 999;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #FFD700;
+      color: #333;
+      transform: scale(1.1);
+    }
 
 .op{
 	position: absolute;
@@ -160,7 +188,7 @@ rotate: -20deg;
 }
 
 
-dialog{
+dialog.serl{
   background: transparent;
   border-color: cyan;
 
@@ -169,6 +197,23 @@ dialog{
   font-family: red rose;
   width: 50%;
   height: 500px;
+}
+
+dialog.acerca{
+  
+  background: transparent;
+  border-image: linear-gradient(45deg, red, blue, cyan) 1;
+  border-style: solid;
+  font-size: 26px;
+  font-family: red rose;
+  width: 50%;
+  height: 500px;
+}
+
+h1.ace{
+	background: linear-gradient(cyan, blue, red);
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
 }
 
 
@@ -189,11 +234,16 @@ main.seriel{
 }
 
 footer{
-	font-family: Bebas Neue;
-	color: white;
+	font-family: verdana;
+	background-color: #4A90E2;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      margin-top: 40px;
+
 
 }
-
 
 
 
