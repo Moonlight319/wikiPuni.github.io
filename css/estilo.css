@@ -1,0 +1,1637 @@
+@font-face{
+  font-family: 'snowy';
+  src: url(../fuentes/snowy_christmas_2/Snowy_Christmas.otf);
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+
+@media (max-width: 1440px) {
+  
+
+
+
+
+
+
+
+
+
+
+
+
+body{
+  background-image: url(../img/fondocasiperfect.jpg);
+  background-size: cover;
+
+
+}
+
+
+
+header.ol{
+  width: 100%;
+  margin: 0 auto ;
+  text-align: center;
+    display: inline-block;
+    position: relative;
+  transition: 0.2s ease-in;
+  overflow: hidden;
+}
+
+nav {
+  font-family: sans-serif;
+      width: 80%; 
+      margin: 0 auto;
+      
+      background: linear-gradient(-45deg,#89e0fe, #4A90E2, #4148af );
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 12px 0;
+      position: relative;
+      top: 10px;
+      z-index: 999;
+      
+    }
+
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #ffc88a ;
+      color: #fff6b8 ;
+      transform: scale(1.1);
+    }
+
+.op{
+  position: absolute;
+      width: 70%;
+      bottom: 200px;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      font-size: 30px;
+      font-family: verdana;
+      background: rgba(0,0,0,0.5);
+      color: white;
+      padding: 10px;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      border-radius: 10px;
+}
+
+header.ol:hover {
+  transform: scale(1.01) ;
+  filter: brightness(0.5) ;
+  
+
+}
+
+header.ol:hover .op{
+
+  opacity: 1;
+
+}
+
+header.origi{
+  position: relative;
+  left: 140px ;
+}
+
+p.ORI{
+  color: white;
+  text-align: center;
+  font-family: verdana;
+
+  font-size: 14px;
+
+}
+
+main {
+  width: 80%; 
+  margin: 0 auto;
+  
+ }
+
+
+section.info{
+
+
+  background: linear-gradient(paleturquoise,turquoise);
+  color: white ;
+  font-family: verdana;
+ border: solid;
+  border-color: lightyellow ;
+  border-width: 4px;
+  border-radius: 20px;
+  
+}
+
+
+
+h1{
+
+  font-family: Bebas Neue;
+  text-decoration: underline;
+  text-align: center;
+}
+
+hr{
+   border: solid;
+  border-color: midnightblue;
+  border-radius: 10px;
+  
+}
+
+.prue{
+
+  width: 40%;
+  margin: 10px auto 10px ;
+  font-family: 'snowy';
+  color: darkturquoise;
+  font-size: 140px;
+  border: solid;
+  border-color: white;
+  background-color: floralwhite;
+  border-radius: 20px;
+
+  
+}
+
+
+
+
+button{
+
+  width: 80%;
+  background: linear-gradient(paleturquoise, blueviolet);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: verdana;
+  font-size: 23px;
+  border: solid;
+  border-color: #349392;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in;
+
+
+}
+
+button:hover{
+  transform: scale(1.05);
+  background: linear-gradient(#f9c544, #f95e2c);
+  -webkit-text-fill-color: transparent;
+  border-color: #e1b139;
+  background-clip: text;
+
+}
+
+
+.pu{
+
+  color: white;
+  font-size: 15px;
+  font-family: verdana;
+  color: white;
+  background: linear-gradient(90deg,powderblue,midnightblue);
+  border: solid;
+  border-color: white;
+  border-radius: 10px;
+}
+
+
+.fond{
+width: 80%;
+
+height: auto;
+object-fit: cover;
+}
+
+
+.puni{
+position: absolute;
+bottom: -4px;
+left: 200px;
+width: 30%;
+height: auto;
+rotate: -20deg;
+}
+
+#alert-dialog {
+  opacity: 0;
+  transition:
+    display 1s allow-discrete,
+    overlay 1s allow-discrete,
+    translate 1s,
+    opacity 1s;
+  translate: 0 50%;
+  will-change: translate, opacity;
+}
+
+#alert-dialog[open] {
+  opacity: 1;
+  translate: 0;
+  @starting-style {
+    opacity: 0;
+    translate: 0 50%;
+  }
+}
+
+#alert-dialog::backdrop {
+  background: linear-gradient(#000d, #000a);
+  opacity: 1;
+  transition:
+    display 1s allow-discrete,
+    opacity 1s;
+
+  @starting-style { opacity: 0 }
+}
+
+#alert-dialog:not([open])::backdrop {
+  opacity: 0;
+}
+
+
+dialog.serl{
+  background: transparent;
+  border-color: cyan;
+
+  color: blue;
+  font-size: 26px;
+  font-family: red rose;
+  width: 50%;
+  height: 500px;
+}
+
+dialog.acerca{
+  
+  background: transparent;
+  border-image: linear-gradient(45deg, red, blue, cyan) 1;
+  border-style: solid;
+  font-size: 26px;
+  font-family: red rose;
+  width: 50%;
+  height: 500px;
+}
+
+h1.ace{
+  background: linear-gradient(cyan, blue, red);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+
+img.set{
+  transition: transform 0.3s ease-in;
+}
+
+img.set:hover{
+  transform: scale(1.05);
+}
+
+main.seriel{
+
+  width: 95%;
+  position: relative;
+  
+  
+}
+
+footer{
+  font-family: verdana;
+  background-color: #4A90E2;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      margin-top: 40px;
+
+
+}
+
+}
+
+
+
+@media (min-width: 1440px) {
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+body{
+  background-image: url(../img/fondocasiperfect.jpg);
+  background-size: cover;
+
+
+}
+
+
+
+header.ol{
+  width: 100%;
+  margin: 0 auto ;
+  text-align: center;
+    display: inline-block;
+    position: relative;
+  transition: 0.2s ease-in;
+  overflow: hidden;
+}
+
+nav {
+  font-family: sans-serif;
+      width: 80%; 
+      margin: 0 auto;
+      
+      background: linear-gradient(-45deg,#89e0fe, #4A90E2, #4148af );
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 12px 0;
+      position: relative;
+      top: 10px;
+      z-index: 999;
+      
+    }
+
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #ffc88a ;
+      color: #fff6b8 ;
+      transform: scale(1.1);
+    }
+
+.op{
+  position: absolute;
+      width: 70%;
+      bottom: 200px;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      font-size: 30px;
+      font-family: verdana;
+      background: rgba(0,0,0,0.5);
+      color: white;
+      padding: 10px;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      border-radius: 10px;
+}
+
+header.ol:hover {
+  transform: scale(1.01) ;
+  filter: brightness(0.5) ;
+  
+
+}
+
+header.ol:hover .op{
+
+  opacity: 1;
+
+}
+
+header.origi{
+  position: relative;
+  left: 140px ;
+}
+
+p.ORI{
+  color: white;
+  text-align: center;
+  font-family: verdana;
+
+  font-size: 14px;
+
+}
+
+main {
+  width: 80%; 
+  margin: 0 auto;
+  
+ }
+
+
+section.info{
+
+
+  background: linear-gradient(paleturquoise,turquoise);
+  color: white ;
+  font-family: verdana;
+ border: solid;
+  border-color: lightyellow ;
+  border-width: 4px;
+  border-radius: 20px;
+  
+}
+
+
+
+h1{
+
+  font-family: Bebas Neue;
+  text-decoration: underline;
+  text-align: center;
+}
+
+hr{
+   border: solid;
+  border-color: midnightblue;
+  border-radius: 10px;
+  
+}
+
+.prue{
+
+  width: 40%;
+  margin: 10px auto 10px ;
+  font-family: 'snowy';
+  color: darkturquoise;
+  font-size: 140px;
+  border: solid;
+  border-color: white;
+  background-color: floralwhite;
+  border-radius: 20px;
+
+  
+}
+
+
+
+
+button{
+
+  width: 80%;
+  background: linear-gradient(paleturquoise, blueviolet);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: verdana;
+  font-size: 23px;
+  border: solid;
+  border-color: #349392;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in;
+
+
+}
+
+button:hover{
+  transform: scale(1.05);
+  background: linear-gradient(#f9c544, #f95e2c);
+  -webkit-text-fill-color: transparent;
+  border-color: #e1b139;
+  background-clip: text;
+
+}
+
+
+.pu{
+
+  color: white;
+  font-size: 15px;
+  font-family: verdana;
+  color: white;
+  background: linear-gradient(90deg,powderblue,midnightblue);
+  border: solid;
+  border-color: white;
+  border-radius: 10px;
+}
+
+
+.fond{
+width: 80%;
+
+height: auto;
+object-fit: cover;
+}
+
+
+.puni{
+position: absolute;
+bottom: -4px;
+left: 200px;
+width: 30%;
+height: auto;
+rotate: -20deg;
+}
+
+#alert-dialog {
+  opacity: 0;
+  transition:
+    display 1s allow-discrete,
+    overlay 1s allow-discrete,
+    translate 1s,
+    opacity 1s;
+  translate: 0 50%;
+  will-change: translate, opacity;
+}
+
+#alert-dialog[open] {
+  opacity: 1;
+  translate: 0;
+  @starting-style {
+    opacity: 0;
+    translate: 0 50%;
+  }
+}
+
+#alert-dialog::backdrop {
+  background: linear-gradient(#000d, #000a);
+  opacity: 1;
+  transition:
+    display 1s allow-discrete,
+    opacity 1s;
+
+  @starting-style { opacity: 0 }
+}
+
+#alert-dialog:not([open])::backdrop {
+  opacity: 0;
+}
+
+
+dialog.serl{
+  background: transparent;
+  border-color: cyan;
+
+  color: blue;
+  font-size: 26px;
+  font-family: red rose;
+  width: 50%;
+  height: 500px;
+}
+
+dialog.acerca{
+  
+  background: transparent;
+  border-image: linear-gradient(45deg, red, blue, cyan) 1;
+  border-style: solid;
+  font-size: 26px;
+  font-family: red rose;
+  width: 50%;
+  height: 500px;
+}
+
+h1.ace{
+  background: linear-gradient(cyan, blue, red);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+
+img.set{
+  transition: transform 0.3s ease-in;
+}
+
+img.set:hover{
+  transform: scale(1.05);
+}
+
+main.seriel{
+
+  width: 95%;
+  position: relative;
+  
+  
+}
+
+footer{
+  font-family: verdana;
+  background-color: #4A90E2;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      margin-top: 40px;
+
+
+}
+
+}
+
+@media (max-width: 1024px) {
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+body{
+  background-image: url(../img/fondocasiperfect.jpg);
+  background-size: cover;
+
+
+}
+
+
+
+header.ol{
+  width: 100%;
+  margin: 0 auto ;
+  text-align: center;
+    display: inline-block;
+    position: relative;
+  transition: 0.2s ease-in;
+  overflow: hidden;
+}
+
+nav {
+  font-family: sans-serif;
+      width: 80%; 
+      margin: 0 auto;
+      
+      background: linear-gradient(-45deg,#89e0fe, #4A90E2, #4148af );
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 12px 0;
+      position: relative;
+      top: 10px;
+      z-index: 999;
+      
+    }
+
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #ffc88a ;
+      color: #fff6b8 ;
+      transform: scale(1.1);
+    }
+
+.op{
+  position: absolute;
+      width: 70%;
+      bottom: 200px;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      font-size: 30px;
+      font-family: verdana;
+      background: rgba(0,0,0,0.5);
+      color: white;
+      padding: 10px;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      border-radius: 10px;
+}
+
+header.ol:hover {
+  transform: scale(1.01) ;
+  filter: brightness(0.5) ;
+  
+
+}
+
+header.ol:hover .op{
+
+  opacity: 1;
+
+}
+
+header.origi{
+  position: relative;
+  left: 140px ;
+}
+
+p.ORI{
+  color: white;
+  text-align: center;
+  font-family: verdana;
+
+  font-size: 14px;
+
+}
+
+main {
+  width: 80%; 
+  margin: 0 auto;
+  
+ }
+
+
+section.info{
+
+
+  background: linear-gradient(paleturquoise,turquoise);
+  color: white ;
+  font-family: verdana;
+ border: solid;
+  border-color: lightyellow ;
+  border-width: 4px;
+  border-radius: 20px;
+  
+}
+
+
+
+h1{
+
+  font-family: Bebas Neue;
+  text-decoration: underline;
+  text-align: center;
+}
+
+hr{
+   border: solid;
+  border-color: midnightblue;
+  border-radius: 10px;
+  
+}
+
+.prue{
+
+  width: 40%;
+  margin: 10px auto 10px ;
+  font-family: 'snowy';
+  color: darkturquoise;
+  font-size: 140px;
+  border: solid;
+  border-color: white;
+  background-color: floralwhite;
+  border-radius: 20px;
+
+  
+}
+
+
+
+
+button{
+
+  width: 80%;
+  background: linear-gradient(paleturquoise, blueviolet);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: verdana;
+  font-size: 23px;
+  border: solid;
+  border-color: #349392;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in;
+
+
+}
+
+button:hover{
+  transform: scale(1.05);
+  background: linear-gradient(#f9c544, #f95e2c);
+  -webkit-text-fill-color: transparent;
+  border-color: #e1b139;
+  background-clip: text;
+
+}
+
+
+.pu{
+
+  color: white;
+  font-size: 15px;
+  font-family: verdana;
+  color: white;
+  background: linear-gradient(90deg,powderblue,midnightblue);
+  border: solid;
+  border-color: white;
+  border-radius: 10px;
+}
+
+
+.fond{
+width: 80%;
+
+height: auto;
+object-fit: cover;
+}
+
+
+.puni{
+position: absolute;
+bottom: -4px;
+left: 200px;
+width: 30%;
+height: auto;
+rotate: -20deg;
+}
+
+#alert-dialog {
+  opacity: 0;
+  transition:
+    display 1s allow-discrete,
+    overlay 1s allow-discrete,
+    translate 1s,
+    opacity 1s;
+  translate: 0 50%;
+  will-change: translate, opacity;
+}
+
+#alert-dialog[open] {
+  opacity: 1;
+  translate: 0;
+  @starting-style {
+    opacity: 0;
+    translate: 0 50%;
+  }
+}
+
+#alert-dialog::backdrop {
+  background: linear-gradient(#000d, #000a);
+  opacity: 1;
+  transition:
+    display 1s allow-discrete,
+    opacity 1s;
+
+  @starting-style { opacity: 0 }
+}
+
+#alert-dialog:not([open])::backdrop {
+  opacity: 0;
+}
+
+
+dialog.serl{
+  background: transparent;
+  border-color: cyan;
+
+  color: blue;
+  font-size: 26px;
+  font-family: red rose;
+  width: 50%;
+  height: 500px;
+}
+
+dialog.acerca{
+  
+  background: transparent;
+  border-image: linear-gradient(45deg, red, blue, cyan) 1;
+  border-style: solid;
+  font-size: 26px;
+  font-family: red rose;
+  width: 50%;
+  height: 500px;
+}
+
+h1.ace{
+  background: linear-gradient(cyan, blue, red);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+
+img.set{
+  transition: transform 0.3s ease-in;
+}
+
+img.set:hover{
+  transform: scale(1.05);
+}
+
+main.seriel{
+
+  width: 95%;
+  position: relative;
+  
+  
+}
+
+footer{
+  font-family: verdana;
+  background-color: #4A90E2;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      margin-top: 40px;
+
+
+}
+  
+}
+
+
+
+
+
+
+
+
+@media (max-width: 600px){
+  
+
+body{
+  background-image: url(../img/fondocasiperfect.jpg);
+  background-size: cover;
+
+
+}
+
+
+
+header.ol{
+  width: 100%;
+  margin: 0 auto ;
+  text-align: center;
+    display: inline-block;
+    position: relative;
+  transition: 0.2s ease-in;
+  overflow: hidden;
+}
+
+nav {
+  font-family: sans-serif;
+      width: 80%; 
+      margin: 0 auto;
+      
+      background: linear-gradient(-45deg,#89e0fe, #4A90E2, #4148af );
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 12px 0;
+      position: relative;
+      top: 10px;
+      z-index: 999;
+      
+    }
+
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #ffc88a ;
+      color: #fff6b8 ;
+      transform: scale(1.1);
+    }
+
+.op{
+  position: absolute;
+      width: 70%;
+      bottom: 200px;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      font-size: 30px;
+      font-family: verdana;
+      background: rgba(0,0,0,0.5);
+      color: white;
+      padding: 10px;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      border-radius: 10px;
+}
+
+header.ol:hover {
+  transform: scale(1.01) ;
+  filter: brightness(0.5) ;
+  
+
+}
+
+header.ol:hover .op{
+
+  opacity: 1;
+
+}
+
+header.origi{
+  position: relative;
+  left: 140px ;
+}
+
+.ORI{
+  color: white;
+  text-align: center;
+  font-family: verdana;
+
+  font-size: 14px;
+
+}
+
+main {
+  width: 80%; 
+  margin: 0 auto;
+  
+ }
+
+
+section.info{
+
+
+  background: linear-gradient(paleturquoise,turquoise);
+  color: white ;
+  font-family: verdana;
+ border: solid;
+  border-color: lightyellow ;
+  border-width: 4px;
+  border-radius: 20px;
+  
+}
+
+
+
+h1{
+
+  font-family: Bebas Neue;
+  text-decoration: underline;
+  text-align: center;
+}
+
+hr{
+   border: solid;
+  border-color: midnightblue;
+  border-radius: 10px;
+  
+}
+
+.prue{
+
+  width: 40%;
+  margin: 10px auto 10px ;
+  font-family: 'snowy';
+  color: darkturquoise;
+  font-size: 140px;
+  border: solid;
+  border-color: white;
+  background-color: floralwhite;
+  border-radius: 20px;
+
+  
+}
+
+
+
+
+button{
+
+  width: 80%;
+  background: linear-gradient(paleturquoise, blueviolet);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: verdana;
+  font-size: 23px;
+  border: solid;
+  border-color: #349392;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in;
+
+
+}
+
+button:hover{
+  transform: scale(1.05);
+  background: linear-gradient(#f9c544, #f95e2c);
+  -webkit-text-fill-color: transparent;
+  border-color: #e1b139;
+  background-clip: text;
+
+}
+
+
+.pu{
+
+  color: white;
+  font-size: 15px;
+  font-family: verdana;
+  color: white;
+  background: linear-gradient(90deg,powderblue,midnightblue);
+  border: solid;
+  border-color: white;
+  border-radius: 10px;
+}
+
+
+.fond{
+width: 80%;
+
+height: auto;
+object-fit: cover;
+}
+
+
+.puni{
+position: absolute;
+bottom: -4px;
+left: 200px;
+width: 30%;
+height: auto;
+rotate: -20deg;
+}
+
+#alert-dialog {
+  opacity: 0;
+  transition:
+    display 1s allow-discrete,
+    overlay 1s allow-discrete,
+    translate 1s,
+    opacity 1s;
+  translate: 0 50%;
+  will-change: translate, opacity;
+}
+
+#alert-dialog[open] {
+  opacity: 1;
+  translate: 0;
+  @starting-style {
+    opacity: 0;
+    translate: 0 50%;
+  }
+}
+
+#alert-dialog::backdrop {
+  background: linear-gradient(#000d, #000a);
+  opacity: 1;
+  transition:
+    display 1s allow-discrete,
+    opacity 1s;
+
+  @starting-style { opacity: 0 }
+}
+
+#alert-dialog:not([open])::backdrop {
+  opacity: 0;
+}
+
+
+dialog.serl{
+  background: transparent;
+  border-color: cyan;
+
+  color: blue;
+  font-size: 26px;
+  font-family: red rose;
+  width: 50%;
+  height: 500px;
+}
+
+dialog.acerca{
+  
+  background: transparent;
+  border-image: linear-gradient(45deg, red, blue, cyan) 1;
+  border-style: solid;
+  font-size: 26px;
+  font-family: red rose;
+  width: 50%;
+  height: 500px;
+}
+
+h1.ace{
+  background: linear-gradient(cyan, blue, red);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+
+img.set{
+  transition: transform 0.3s ease-in;
+}
+
+img.set:hover{
+  transform: scale(1.05);
+}
+
+main.seriel{
+
+  width: 95%;
+  position: relative;
+  font-size: 0.1rem;
+  
+  
+}
+
+footer{
+  font-family: verdana;
+  background-color: #4A90E2;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      margin-top: 40px;
+
+
+}
+
+}
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@font-face{
+  font-family: 'snowy';
+  src: url(../fuentes/snowy_christmas_2/Snowy_Christmas.otf);
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+body{
+	background-image: url(../img/fondocasiperfect.jpg);
+  background-size: cover;
+
+
+}
+
+
+
+header.ol{
+	width: 100%;
+  margin: 0 auto ;
+	text-align: center;
+    display: inline-block;
+    position: relative;
+	transition: 0.2s ease-in;
+  overflow: hidden;
+}
+
+nav {
+  font-family: sans-serif;
+	    width: 80%; 
+	    margin: 0 auto;
+      
+      background: linear-gradient(-45deg,#89e0fe, #4A90E2, #4148af );
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 12px 0;
+      position: relative;
+      top: 10px;
+      z-index: 999;
+      
+    }
+
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #ffc88a ;
+      color: #fff6b8 ;
+      transform: scale(1.1);
+    }
+
+.op{
+	position: absolute;
+      width: 70%;
+      bottom: 200px;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      font-size: 30px;
+      font-family: verdana;
+      background: rgba(0,0,0,0.5);
+      color: white;
+      padding: 10px;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      border-radius: 10px;
+}
+
+header.ol:hover {
+	transform: scale(1.01) ;
+	filter: brightness(0.5) ;
+	
+
+}
+
+header.ol:hover .op{
+
+	opacity: 1;
+
+}
+
+header.origi{
+	position: relative;
+	left: 140px ;
+}
+
+p.ORI{
+	color: white;
+	text-align: center;
+	font-family: verdana;
+
+	font-size: 14px;
+
+}
+
+main {
+	width: 80%; 
+	margin: 0 auto;
+	
+ }
+
+
+section.info{
+
+
+	background: linear-gradient(paleturquoise,turquoise);
+	color: white ;
+	font-family: verdana;
+ border: solid;
+  border-color: lightyellow ;
+  border-width: 4px;
+  border-radius: 20px;
+  
+}
+
+
+
+h1{
+
+	font-family: Bebas Neue;
+	text-decoration: underline;
+  text-align: center;
+}
+
+hr{
+   border: solid;
+  border-color: midnightblue;
+  border-radius: 10px;
+  
+}
+
+.prue{
+
+  width: 40%;
+  margin: 10px auto 10px ;
+  font-family: 'snowy';
+  color: darkturquoise;
+  font-size: 140px;
+  border: solid;
+  border-color: white;
+  background-color: floralwhite;
+  border-radius: 20px;
+
+  
+}
+
+
+
+
+button{
+
+	width: 80%;
+	background: linear-gradient(paleturquoise, blueviolet);
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	font-family: verdana;
+	font-size: 23px;
+	border: solid;
+	border-color: #349392;
+  border-radius: 10px;
+	transition: transform 0.3s ease-in;
+
+
+}
+
+button:hover{
+	transform: scale(1.05);
+	background: linear-gradient(#f9c544, #f95e2c);
+	-webkit-text-fill-color: transparent;
+  border-color: #e1b139;
+	background-clip: text;
+
+}
+
+
+.pu{
+
+	color: white;
+	font-size: 15px;
+	font-family: verdana;
+  color: white;
+  background: linear-gradient(90deg,powderblue,midnightblue);
+  border: solid;
+  border-color: white;
+  border-radius: 10px;
+}
+
+
+.fond{
+width: 80%;
+
+height: auto;
+object-fit: cover;
+}
+
+
+.puni{
+position: absolute;
+bottom: -4px;
+left: 200px;
+width: 30%;
+height: auto;
+rotate: -20deg;
+}
+
+#alert-dialog {
+  opacity: 0;
+  transition:
+    display 1s allow-discrete,
+    overlay 1s allow-discrete,
+    translate 1s,
+    opacity 1s;
+  translate: 0 50%;
+  will-change: translate, opacity;
+}
+
+#alert-dialog[open] {
+  opacity: 1;
+  translate: 0;
+  @starting-style {
+    opacity: 0;
+    translate: 0 50%;
+  }
+}
+
+#alert-dialog::backdrop {
+  background: linear-gradient(#000d, #000a);
+  opacity: 1;
+  transition:
+    display 1s allow-discrete,
+    opacity 1s;
+
+  @starting-style { opacity: 0 }
+}
+
+#alert-dialog:not([open])::backdrop {
+  opacity: 0;
+}
+
+
+dialog.serl{
+  background: transparent;
+  border-color: cyan;
+
+  color: blue;
+  font-size: 26px;
+  font-family: red rose;
+  width: 50%;
+  height: 500px;
+}
+
+dialog.acerca{
+  
+  background: transparent;
+  border-image: linear-gradient(45deg, red, blue, cyan) 1;
+  border-style: solid;
+  font-size: 26px;
+  font-family: red rose;
+  width: 50%;
+  height: 500px;
+}
+
+h1.ace{
+	background: linear-gradient(cyan, blue, red);
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+
+
+img.set{
+	transition: transform 0.3s ease-in;
+}
+
+img.set:hover{
+	transform: scale(1.05);
+}
+
+main.seriel{
+
+	width: 95%;
+	position: relative;
+	
+	
+}
+
+footer{
+	font-family: verdana;
+	background-color: #4A90E2;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      margin-top: 40px;
+
+
+}
+
+
+
+
+
+      
+
+
+
+
