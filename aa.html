@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>PuniAmigo Wiki</title>
+  <meta name="description" content="Wiki de PuniAmigo - Información de personajes, eventos y más.">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #6CCFF6;
+      padding: 20px;
+      text-align: center;
+      font-size: 2em;
+      font-weight: bold;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav {
+      background-color: #4A90E2;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 12px 0;
+      position: sticky;
+      top: 80px;
+      z-index: 999;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #FFD700;
+      color: #333;
+      transform: scale(1.1);
+    }
+
+    .welcome {
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 1.4em;
+      background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+      animation: fadeIn 1s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .characters {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 40px;
+    }
+
+    .character-card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.4s, box-shadow 0.4s;
+    }
+
+    .character-card:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    .character-card img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background-color: #4A90E2;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>PuniAmigo Wiki</header>
+
+<nav>
+  <a href="#">Inicio</a>
+  <a href="#">Personajes</a>
+  <a href="#">Eventos</a>
+  <a href="#">Contacto</a>
+</nav>
+
+<div class="welcome">
+  ¡Bienvenido a la Wiki de PuniAmigo! 🌟<br>
+  Aquí encontrarás toda la información de personajes, eventos y más.
+</div>
+
+<div class="characters">
+  <div class="character-card">
+    <img src="https://via.placeholder.com/100" alt="Puni 1" />
+    <h3>Puni #1</h3>
+    <p>Un puni adorable y valiente.</p>
+  </div>
+  <div class="character-card">
+    <img src="https://via.placeholder.com/100" alt="Puni 2" />
+    <h3>Puni #2</h3>
+    <p>Siempre dispuesto a ayudar.</p>
+  </div>
+  <div class="character-card">
+    <img src="https://via.placeholder.com/100" alt="Puni 3" />
+    <h3>Puni #3</h3>
+    <p>Un puni lleno de misterio.</p>
+  </div>
+</div>
+
+<footer>
+  © 2025 PuniAmigo Wiki | Hecho con ❤️ por Moonlight
+</footer>
+
+</body>
+</html>
