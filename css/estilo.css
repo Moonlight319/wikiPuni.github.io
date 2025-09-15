@@ -1424,6 +1424,19 @@ p.ORI{
 
 }
 
+h2.ORI{
+  background-color: midnightblue;
+  border-radius: 5px;
+  border: solid;
+  border-color: darkblue;
+  color: white;
+  text-align: justify;
+  font-family: verdana;
+
+  font-size: 12px;
+
+}
+
 main {
 	width: 80%; 
 	margin: 0 auto;
@@ -1626,9 +1639,40 @@ footer{
 
 }
 
+.headersaigo{
+  margin-left: 25%;
+}
 
 
+.infosa{
+  background-color: #1D2186;
+  border: solid;
+  border-color: blueviolet;
+  border-radius: 20px;
+  color: white;
+  font-family: verdana;
+  font-size: 15px;
 
+}
+.frasesai{
+ background-color: #5458D9;
+  border: solid;
+  border-color: blueviolet;
+  border-radius: 20px;
+  color: white;
+  font-family: verdana;
+  font-size: 15px;
+}
+
+.bui{
+   background-color: #8185E3;
+  border: solid;
+  border-color: blueviolet;
+  border-radius: 20px;
+  color: white;
+  font-family: verdana;
+  font-size: 15px;
+}
 
       
 
